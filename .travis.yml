@@ -5,5 +5,6 @@ cache:
    
 jdk: oraclejdk8
 before_script:
-   -cd sandyasarya/TestNg/tree/master/TestNgCommand1
+   cd..
+   cd D:\GitEclipse\TestNG\TestNgCommand1
 script:  mvn clean
