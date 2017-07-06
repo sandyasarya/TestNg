@@ -4,8 +4,5 @@ cache:
     - $HOME/.m2
    
 jdk: oraclejdk8
-before_script:
-   cd..
-   mv /d/GitEclipse/TestNG TestNgCommand1
-   cd TestNgCommand1
-script:  mvn clean
+
+script: mvn -q clean install surefire:test -Dtest.includes=D:\\GitEclipse\\TestNG\\TestNgCommand1\\src\\TestClass\\NewTest.java
