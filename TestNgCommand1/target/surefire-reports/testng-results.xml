@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="21" started-at="2017-07-06T09:39:05Z" finished-at="2017-07-06T09:39:05Z">
+  <suite name="Suite" duration-ms="22" started-at="2017-07-06T10:58:36Z" finished-at="2017-07-06T10:58:36Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="21" started-at="2017-07-06T09:39:05Z" finished-at="2017-07-06T09:39:05Z">
+    <test name="Test" duration-ms="22" started-at="2017-07-06T10:58:36Z" finished-at="2017-07-06T10:58:36Z">
       <class name="TestClass.NewTest">
-        <test-method status="PASS" signature="Beforetest(java.lang.reflect.Method)[pri:0, instance:TestClass.NewTest@28f67ac7]" name="Beforetest" is-config="true" duration-ms="3" started-at="2017-07-06T15:09:05Z" finished-at="2017-07-06T15:09:05Z">
+        <test-method status="PASS" signature="Beforetest(java.lang.reflect.Method)[pri:0, instance:TestClass.NewTest@28f67ac7]" name="Beforetest" is-config="true" duration-ms="2" started-at="2017-07-06T16:28:36Z" finished-at="2017-07-06T16:28:36Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Beforetest -->
-        <test-method status="PASS" signature="AbilitiesTest()[pri:0, instance:TestClass.NewTest@28f67ac7]" name="AbilitiesTest" duration-ms="1" started-at="2017-07-06T15:09:05Z" finished-at="2017-07-06T15:09:05Z">
+        <test-method status="PASS" signature="AbilitiesTest()[pri:0, instance:TestClass.NewTest@28f67ac7]" name="AbilitiesTest" duration-ms="0" started-at="2017-07-06T16:28:36Z" finished-at="2017-07-06T16:28:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AbilitiesTest -->
-        <test-method status="PASS" signature="AbilitiesTest1()[pri:0, instance:TestClass.NewTest@28f67ac7]" name="AbilitiesTest1" duration-ms="0" started-at="2017-07-06T15:09:05Z" finished-at="2017-07-06T15:09:05Z">
+        <test-method status="PASS" signature="AbilitiesTest1()[pri:0, instance:TestClass.NewTest@28f67ac7]" name="AbilitiesTest1" duration-ms="0" started-at="2017-07-06T16:28:36Z" finished-at="2017-07-06T16:28:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AbilitiesTest1 -->
-        <test-method status="PASS" signature="Beforetest(java.lang.reflect.Method)[pri:0, instance:TestClass.NewTest@28f67ac7]" name="Beforetest" is-config="true" duration-ms="0" started-at="2017-07-06T15:09:05Z" finished-at="2017-07-06T15:09:05Z">
+        <test-method status="PASS" signature="Beforetest(java.lang.reflect.Method)[pri:0, instance:TestClass.NewTest@28f67ac7]" name="Beforetest" is-config="true" duration-ms="0" started-at="2017-07-06T16:28:36Z" finished-at="2017-07-06T16:28:36Z">
           <params>
             <param index="0">
               <value>

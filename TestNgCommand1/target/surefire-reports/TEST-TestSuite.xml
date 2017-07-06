@@ -25,7 +25,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="D:\Projects\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4917182959170495919.tmp"/>
+    <property name="classworlds.conf" value="D:\Projects\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3373354484252486850.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_121/bin/server;C:/Program Files/Java/jre1.8.0_121/bin;C:/Program Files/Java/jre1.8.0_121/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;D:\android-SDK\platform-tools;D:\android-SDK\tools;D:\android-SDK\tools\bin;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\sandesh\AppData\Local\Microsoft\WindowsApps;C:\Users\sandesh\AppData\Roaming\npm;C:\Program Files\Java\jdk1.8.0_121\bin;D:\eclipse-jee-kepler-SR2-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -42,7 +42,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_121\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
