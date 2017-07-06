@@ -4,6 +4,6 @@ cache:
     - $HOME/.m2
    
 jdk: oraclejdk8
-script: 
-      cd D:\\GitEclipse\\TestNG\\
-    --  mvn clean
+before_script:
+   cd D:\\GitEclipse\\TestNG\\
+script:  mvn clean
