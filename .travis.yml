@@ -4,7 +4,7 @@ cache:
     - $HOME/.m2
 jdk: oraclejdk8
 script: 
-      cd D:\GitEclipse\TestNG\TestNgCommand1
+      cd D:\\GitEclipse\\TestNG\\TestNgCommand1
       mvn clean
       mvn compile 
       mvn package
