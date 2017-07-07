@@ -6,4 +6,4 @@ cache:
    
 jdk: oraclejdk8
 
-script: mvn -f ${TRAVIS_BUILD_DIR}/TestNgCommand1/pom.xml clean verify
+script: mvn -f ${TRAVIS_BUILD_DIR}/TestNgCommand1/pom.xml clean compile
