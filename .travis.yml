@@ -5,4 +5,4 @@ cache:
    
 jdk: oraclejdk8
 
-script: mvn -f \tree\master\TestNgCommand1\pom.xml
+script: mvn -f \\tree\\master\\TestNgCommand1\\pom.xml
