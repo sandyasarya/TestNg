@@ -5,4 +5,4 @@ cache:
    
 jdk: oraclejdk8
 
-script: mvn -q clean install surefire:test -Dtest.includes=D:\\GitEclipse\\TestNG\\TestNgCommand1\\src\\TestClass\\NewTest.java
+script: mvn -f D:\GitEclipse\TestNG\TestNgCommand1\pom.xml
