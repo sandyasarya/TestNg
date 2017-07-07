@@ -27,7 +27,7 @@ public class NewTest extends JavaCode.CommonAction
     		  {   			  
     			  CommonAction.App();
     			  
-    			 //ssert.assertTrue(false);
+    			 Assert.assertTrue(false);
     		  }
      }
 	@Test 
