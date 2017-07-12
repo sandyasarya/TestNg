@@ -10,8 +10,22 @@ jdk: oraclejdk8
 
 script:
 - mvn -f ${TRAVIS_BUILD_DIR}/TestNgCommand1/pom.xml clean test compile package
-- echo "$TRAVIS_BUILD_DIR"
+- echo "$home_loc"
+
+matrix:
+  include:
+  - jdk: "Test"
+    env: TEST_SUITE=First Suite
+  - jdk: "QA"
+    env: TEST_SUITE=New
 
 notifications:
-  email:
-    - sandesh.gadekar@mobiliya.com
+  email: sandesh.gadekar@mobiliya.com
+
+branches:
+  only:
+  - master
+
+git:
+  depth: 3
+
