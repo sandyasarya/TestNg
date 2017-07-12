@@ -11,11 +11,11 @@ matrix:
   include:
   - jdk: oraclejdk8
     env: TEST_SUITE=First Suite
-  - jdk: oraclejdk7
+  - jdk: 8
     env: TEST_SUITE=New
 
   allow_failures:
-  - jdk: oraclejdk7
+  - jdk: 8
     env: TEST_SUITE=New
 
 
