@@ -8,7 +8,9 @@ cache:
    
 jdk: oraclejdk8
 
-env: Test
+env:
+  - TEST_SUITE=units
+  - TEST_SUITE=integration
 matrix:
   include:
   - jdk: oraclejdk8
