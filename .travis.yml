@@ -7,13 +7,14 @@ cache:
    
 jdk: oraclejdk8
 
+env: Test
 matrix:
   include:
   - jdk: oraclejdk8
     env: TEST_SUITE=First Suite
   - jdk: 8
     env: TEST_SUITE=New
-
+     
   allow_failures:
   - jdk: 8
     env: TEST_SUITE=New
