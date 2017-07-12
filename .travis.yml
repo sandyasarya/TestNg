@@ -9,9 +9,9 @@ jdk: oraclejdk8
 
 matrix:
   include:
-  - jdk: "Test"
+  - jdk: oraclejdk8
     env: TEST_SUITE=First Suite
-  - jdk: "QA"
+  - jdk: oraclejdk8
     env: TEST_SUITE=New
 
 script:
