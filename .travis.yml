@@ -1,7 +1,9 @@
 language: java
 install: true
 
-
+before_script : 
+- cd /d D:\apache-jmeter-3.2\apache-jmeter-3.2\bin
+- jmet-jmeteer -g D:\\apache-jmeter-3.2\\apacher-3.2\\bin\\result.jtl -o  C:\\Users\\sandesh\\Desktop\\dm1
 cache:
   directories:
     - $HOME/.m2
@@ -22,8 +24,7 @@ matrix:
   - jdk: 8
     env: TEST_SUITE=New
 
-
-script:
+script: 
 - mvn -f ${TRAVIS_BUILD_DIR}/TestNgCommand1/pom.xml clean test compile package
 - echo "$TRAVIS_BUILD_DIR"
 
