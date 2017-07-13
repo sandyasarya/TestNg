@@ -1,7 +1,7 @@
 language: java
 before_install:
 - sudo apt-get install jmeter
-- sh '/home/ubuntu/apache-jmeter-3.1.0/bin/jmeter.sh' 
+- sh '/home/travis/apache-jmeter-3.1.0/bin/jmeter.sh' 
 - echo "$HOME"
 - echo "$PATH"
 install: true
