@@ -1,9 +1,9 @@
 language: java
 before_install:
 - sudo apt-get install jmeter
-- jmeter=which jmeter
-- ls /home/travis
-- $jmeter -g D:\\apache-jmeter-3.2\\apacher-3.2\\bin\\result.jtl -o  C:\\Users\\sandesh\\Desktop\\dm1
+- which jmeter
+- cd /usr/bin/jmeter
+- sh jmeter.sh -n -t "GUru.jmx" 
 - echo "$PATH"
 install: true
 
