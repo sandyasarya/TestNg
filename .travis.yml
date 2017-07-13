@@ -1,10 +1,10 @@
 language: java
 before_install:
 - sudo apt-get install jmeter
-- ls /usr/bin | grep .sh
-- ls /usr/
+- which jmeter
+- ls /usr/bin
 - ls /usr/local
-- ls /home/ubuntu/
+- ls /home/
 - jmeter -g D:\\apache-jmeter-3.2\\apacher-3.2\\bin\\result.jtl -o  C:\\Users\\sandesh\\Desktop\\dm1
 - echo "$PATH"
 install: true
