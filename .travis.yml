@@ -1,7 +1,7 @@
 language: java
 before_install:
 - sudo apt-get install jmeter
-- ls /usr/bin | grep j
+- ls /usr/bin | grep .sh
 - ls /usr/
 - ls /usr/local
 - ls /home/ubuntu/
@@ -11,7 +11,7 @@ install: true
 
 #before_script : 
 #- cd /d D:\apache-jmeter-3.2\apache-jmeter-3.2\bin
-#- jmet-jmeteer -g D:\\apache-jmeter-3.2\\apacher-3.2\\bin\\result.jtl -o  C:\\Users\\sandesh\\Desktop\\dm1
+- jmet-jmeteer -g D:\\apache-jmeter-3.2\\apacher-3.2\\bin\\result.jtl -o  C:\\Users\\sandesh\\Desktop\\dm1
 cache:
   directories:
     - $HOME/.m2
