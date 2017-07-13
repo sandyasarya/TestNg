@@ -1,6 +1,8 @@
 language: java
 before_install:
 - sudo apt-get install jmeter
+- echo "$HOME"
+- echo "$PATH"
 install: true
 
 #before_script : 
