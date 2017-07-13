@@ -17,15 +17,15 @@ matrix:
   include:
   - jdk: oraclejdk8
     env: TEST_SUITE=First Suite
-  - jdk: 8
-    env: TEST_SUITE=New
+#  - jdk: 8
+#    env: TEST_SUITE=New
      
   allow_failures:
   - jdk: 8
     env: TEST_SUITE=New
 
 script: 
-./mvnw test  ${TRAVIS_BUILD_DIR}/TestNgCommand1/src/TestClass/NewTest.java
+- ./mvnw test  ${TRAVIS_BUILD_DIR}/TestNgCommand1/src/TestClass/NewTest.java
 - echo "$TRAVIS_BUILD_DIR"
 
 notifications:
