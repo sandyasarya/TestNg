@@ -1,9 +1,9 @@
 language: java
 before_install:
 - sudo apt-get install jmeter
-- cd apache-jmeter-2.3.4_src/bin
+- echo "$JMETER_HOME"
 - sh '/jmeter.sh' 
-- echo "$HOME"
+- echo "ls /usr/bim | grep jm"
 - echo "$PATH"
 install: true
 
