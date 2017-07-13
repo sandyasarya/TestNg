@@ -25,7 +25,7 @@ matrix:
     env: TEST_SUITE=New
 
 script: 
-- ./mvnw -f ${TRAVIS_BUILD_DIR}/TestNgCommand1/pom.xml clean test compile package
+./mvnw test  ${TRAVIS_BUILD_DIR}/TestNgCommand1/src/TestClass/NewTest.java
 - echo "$TRAVIS_BUILD_DIR"
 
 notifications:
