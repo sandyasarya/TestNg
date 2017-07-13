@@ -2,6 +2,7 @@ language: java
 before_install:
 - sudo apt-get install jmeter
 - ls /usr/bin/jmeter | grep jm
+- ls /local/apps 
 - sh '/bin/jmeter.sh' 
 - echo "$PATH"
 install: true
