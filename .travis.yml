@@ -1,6 +1,7 @@
 language: java
 before_install:
 - sudo apt-get install jmeter
+- sh '/home/ubuntu/apache-jmeter-3.1.0/bin/jmeter.sh' 
 - echo "$HOME"
 - echo "$PATH"
 install: true
@@ -32,8 +33,7 @@ script:
 #- mvn -f ${TRAVIS_BUILD_DIR}/TestNgCommand1/pom.xml clean test compile package
 - echo "$TRAVIS_BUILD_DIR"
 - rm -rf results && mkdir results
-- apache-jmeter-3.0/bin/jmeter.sh -j results/jmeter.log -p tests/jmeter.properties -t tests/my_test_with_parameters.jmx -n -l results/my_test_with_parameters.jtl -Jserver=google.com
-
+- apache-jmeter-3.0/bin/jmeter.sh
 
 notifications:
   email: sandesh.gadekar@mobiliya.com
