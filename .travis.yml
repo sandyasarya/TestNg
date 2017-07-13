@@ -1,6 +1,6 @@
 language: java
 before_install:
-- $ sudo apt-get install jmeter
+- sudo apt-get install jmeter
 install: true
 
 #before_script : 
