@@ -2,7 +2,8 @@ language: java
 before_install:
 - sudo apt-get install jmeter
 - export JAVA_CMD=$JAVA_HOME/bin/java 
-- jmeter=which jmeter
+-ls /usr/lib/
+#- jmeter=which jmeter
 # cd /usr/bin/jmeter
 - echo "$JAVA_HOME"
 - echo "$PATH"
