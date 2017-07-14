@@ -1,7 +1,12 @@
 package TestClass;
 
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -25,9 +30,32 @@ public class NewTest extends JavaCode.CommonAction
      {
     		
     		  {   			  
-    			  CommonAction.App();
     			  
-    			 //Assert.assertTrue(false);
+    			    String[] command = {"CMD", "/C", "jmeter -g D:\\apache-jmeter-3.2\\apache-jmeter-3.2\\bin\\result.jtl -o C:\\Users\\sandesh\\Desktop\\SS1"};
+    		        ProcessBuilder probuilder = new ProcessBuilder( command );
+    		        //You can set up your work directory
+    		        probuilder.directory(new File("D:\\apache-jmeter-3.2\\apache-jmeter-3.2\\bin"));
+    		        
+    		        Process process = probuilder.start();
+    		        
+    		        //Read out dir output
+    		        InputStream is = process.getInputStream();
+    		        InputStreamReader isr = new InputStreamReader(is);
+    		        BufferedReader br = new BufferedReader(isr);
+    		        String line;
+    		        System.out.printf("Output of running %s is:\n", Arrays.toString(command));
+    		        while ((line = br.readLine()) != null) {
+    		            System.out.println(line);
+    		        }
+    		        
+    		        //Wait to get exit value
+    		        try {
+    		            int exitValue = process.waitFor();
+    		            System.out.println("\n\nExit Value is " + exitValue);
+    		        } catch (InterruptedException e) {
+    		            // TODO Auto-generated catch block
+    		            e.printStackTrace();
+    		        }
     		  }
      }
 	@Test 
