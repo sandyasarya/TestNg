@@ -5,8 +5,13 @@ before_install:
 - which junit
 - sudo ln -s /usr/bin/junit /usr/share/jmeter/lib/junit
 - export JAVA_CMD=$JAVA_HOME/bin/java 
-- ls /usr/lib/ | grep j
-- ls /usr/bin/ | grep j
+- ls /usr/lib/ | grep ja
+- ls /usr/lib/ | grep jme
+- ls /usr/share/ | grep ja
+- ls /usr/share/ | grep jme
+- ls /usr/bin/ | grep ja
+- ls /usr/bin/ | grep jme
+- ls /usr/bin/jmeter-server
 - jmeter=which jmeter
 # cd /usr/bin/jmeter
 - echo "$JAVA_HOME"
