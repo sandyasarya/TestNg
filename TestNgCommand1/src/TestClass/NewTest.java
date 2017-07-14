@@ -55,7 +55,7 @@ public class NewTest extends JavaCode.CommonAction
 	conn.setRequestMethod("GET");
 	conn.setRequestProperty("Accept", "application/json");
 
-	HttpsURLConnection con1 = (HttpsURLConnection)url.openConnection();
+	//HttpsURLConnection con1 = (HttpsURLConnection)url.openConnection();
 
 	if (conn.getResponseCode() != 200) 
 	{

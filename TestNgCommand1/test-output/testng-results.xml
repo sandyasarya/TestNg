@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="16" started-at="2017-07-04T12:27:42Z" finished-at="2017-07-04T12:27:42Z">
+  <suite name="Default suite" duration-ms="1165" started-at="2017-07-14T10:57:39Z" finished-at="2017-07-14T10:57:40Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="16" started-at="2017-07-04T12:27:42Z" finished-at="2017-07-04T12:27:42Z">
+    <test name="Default test" duration-ms="1165" started-at="2017-07-14T10:57:39Z" finished-at="2017-07-14T10:57:40Z">
       <class name="TestClass.NewTest">
-        <test-method status="PASS" signature="AbilitiesTest()[pri:0, instance:TestClass.NewTest@5b1d2887]" name="AbilitiesTest" duration-ms="0" started-at="2017-07-04T17:57:42Z" finished-at="2017-07-04T17:57:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AbilitiesTest -->
-        <test-method status="PASS" signature="Beforetest(java.lang.reflect.Method)[pri:0, instance:TestClass.NewTest@5b1d2887]" name="Beforetest" is-config="true" duration-ms="0" started-at="2017-07-04T17:57:42Z" finished-at="2017-07-04T17:57:42Z">
+        <test-method status="PASS" signature="Beforetest(java.lang.reflect.Method)[pri:0, instance:TestClass.NewTest@5c909414]" name="Beforetest" is-config="true" duration-ms="5" started-at="2017-07-14T16:27:39Z" finished-at="2017-07-14T16:27:39Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +18,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Beforetest -->
+        <test-method status="PASS" signature="AbilitiesTest()[pri:0, instance:TestClass.NewTest@5c909414]" name="AbilitiesTest" duration-ms="1120" started-at="2017-07-14T16:27:39Z" finished-at="2017-07-14T16:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AbilitiesTest -->
+        <test-method status="PASS" signature="AbilitiesTest1()[pri:0, instance:TestClass.NewTest@5c909414]" name="AbilitiesTest1" duration-ms="3" started-at="2017-07-14T16:27:40Z" finished-at="2017-07-14T16:27:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AbilitiesTest1 -->
+        <test-method status="PASS" signature="Beforetest(java.lang.reflect.Method)[pri:0, instance:TestClass.NewTest@5c909414]" name="Beforetest" is-config="true" duration-ms="0" started-at="2017-07-14T16:27:40Z" finished-at="2017-07-14T16:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestClass.NewTest.AbilitiesTest1() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Beforetest -->
       </class> <!-- TestClass.NewTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

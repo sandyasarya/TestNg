@@ -1,10 +1,10 @@
 language: java
 before_install:
-- sudo apt-get install jmeter
-- sudo apt-get install junit
-- which junit
-- sudo ln -s /usr/bin/junit /usr/share/jmeter/lib/junit
-- export JAVA_CMD=$JAVA_HOME/bin/java 
+#- sudo apt-get install jmeter
+#- sudo apt-get install junit
+#- which junit
+#- sudo ln -s /usr/bin/junit /usr/share/jmeter/lib/junit
+#- export JAVA_CMD=$JAVA_HOME/bin/java 
 #- ls /usr/lib/ | grep ja
 #- ls /usr/lib/ | grep jme
 #- ls /usr/share/ | grep ja
@@ -12,7 +12,7 @@ before_install:
 #- ls /usr/bin/ | grep ja
 #- ls /usr/bin/ | grep jme
 #- ls /usr/bin/jmeter-server
-- which jmeter
+#- which jmeter
 # cd /usr/bin/jmeter
 - echo "$JAVA_HOME"
 - echo "$PATH"
