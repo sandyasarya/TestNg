@@ -6,13 +6,33 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Method;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Arrays;
+import java.util.Scanner;
 
+import javax.net.ssl.HttpsURLConnection;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import JavaCode.CommonAction;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Scanner;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import javax.net.ssl.HttpsURLConnection;
 
 
 public class NewTest extends JavaCode.CommonAction
@@ -28,37 +48,60 @@ public class NewTest extends JavaCode.CommonAction
 	@Test 
     public void AbilitiesTest() throws IOException, InterruptedException
      {
-    		
-    		  {   			  //TestNgCommand1\src\TestClass\Test.jmx
-    			  
-    			  //  String[] command = {"CMD", "/C", "jmeter -g D:\\apache-jmeter-3.2\\apache-jmeter-3.2\\bin\\result.jtl -o C:\\Users\\sandesh\\Desktop\\SS1"};
-    		  String[] command = {"CMD", "/C", "jmeter -n -t ${TRAVIS_BUILD_DIR}\\TestNgCommand1\\Test.jmx -l ${TRAVIS_BUILD_DIR}\\TestNgCommand1\\result.jtl -e -o ${TRAVIS_BUILD_DIR}\\TestNgCommand1"};
-    		        ProcessBuilder probuilder = new ProcessBuilder( command );
-    		        //You can set up your work directory
-    		        probuilder.directory(new File("/usr/bin/jmeter/bin"));
-    		    //    probuilder.directory(new File("D:\\apache-jmeter-3.2\\apache-jmeter-3.2\\bin"));
-    		        
-    		        Process process = probuilder.start();
-    		        
-    		        //Read out dir output
-    		        InputStream is = process.getInputStream();
-    		        InputStreamReader isr = new InputStreamReader(is);
-    		        BufferedReader br = new BufferedReader(isr);
-    		        String line;
-    		        System.out.printf("Output of running %s is:\n", Arrays.toString(command));
-    		        while ((line = br.readLine()) != null) {
-    		            System.out.println(line);
-    		        }
-    		        
-    		        //Wait to get exit value
-    		        try {
-    		            int exitValue = process.waitFor();
-    		            System.out.println("\n\nExit Value is " + exitValue);
-    		        } catch (InterruptedException e) {
-    		            // TODO Auto-generated catch block
-    		            e.printStackTrace();
-    		        }
-    		  }
+    	try
+    	{		String url1="http://maps.googleapis.com/maps/api/geocode/json?address=chicago&sensor=false&#8221;";
+		URL url = new URL(url1);
+	HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+	conn.setRequestMethod("GET");
+	conn.setRequestProperty("Accept", "application/json");
+
+	HttpsURLConnection con1 = (HttpsURLConnection)url.openConnection();
+
+	if (conn.getResponseCode() != 200) 
+	{
+	throw new RuntimeException(" HTTP error code :" + conn.getResponseCode());
+	}
+
+	Scanner scan = new Scanner(url.openStream());
+	String entireResponse = new String();
+	while (scan.hasNext())
+	entireResponse += scan.nextLine();
+
+	System.out.println("Response : "+entireResponse);
+
+	scan.close();
+
+	JSONObject obj = new JSONObject(entireResponse );
+	String responseCode = obj.getString("status");
+	System.out.println("status : " + responseCode);
+
+	JSONArray arr = obj.getJSONArray("results");
+	for (int i = 0; i < arr.length(); i++) {
+	String placeid = arr.getJSONObject(i).getString("place_id");
+	System.out.println("Place id : " + placeid);
+	String formatAddress = arr.getJSONObject(i).getString("formatted_address");
+	System.out.println("Address : " + formatAddress);
+
+	//validating Address as per the requirement
+	if(formatAddress.equalsIgnoreCase("Chicago, IL, USA"))
+	{
+	System.out.println("Address is as Expected");
+	}
+	else
+	{
+	System.out.println("Address is not as Expected");
+	}
+	}
+
+	conn.disconnect();
+	} catch (MalformedURLException e) {
+	e.printStackTrace();
+
+	} catch (IOException e) {
+
+	e.printStackTrace();
+
+	}
      }
 	@Test 
     public void AbilitiesTest1() throws IOException, InterruptedException
