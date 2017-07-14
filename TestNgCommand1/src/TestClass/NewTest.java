@@ -29,9 +29,10 @@ public class NewTest extends JavaCode.CommonAction
     public void AbilitiesTest() throws IOException, InterruptedException
      {
     		
-    		  {   			  
+    		  {   			  //TestNgCommand1\src\TestClass\Test.jmx
     			  
-    			    String[] command = {"CMD", "/C", "jmeter -g D:\\apache-jmeter-3.2\\apache-jmeter-3.2\\bin\\result.jtl -o C:\\Users\\sandesh\\Desktop\\SS1"};
+    			  //  String[] command = {"CMD", "/C", "jmeter -g D:\\apache-jmeter-3.2\\apache-jmeter-3.2\\bin\\result.jtl -o C:\\Users\\sandesh\\Desktop\\SS1"};
+    		  String[] command = {"CMD", "/C", "jmeter -n -t ${TRAVIS_BUILD_DIR}\\TestNgCommand1\\Test.jmx -l ${TRAVIS_BUILD_DIR}\\TestNgCommand1\\result.jtl -e -o ${TRAVIS_BUILD_DIR}\\TestNgCommand1"};
     		        ProcessBuilder probuilder = new ProcessBuilder( command );
     		        //You can set up your work directory
     		        probuilder.directory(new File("D:\\apache-jmeter-3.2\\apache-jmeter-3.2\\bin"));
