@@ -5,14 +5,14 @@ before_install:
 - which junit
 - sudo ln -s /usr/bin/junit /usr/share/jmeter/lib/junit
 - export JAVA_CMD=$JAVA_HOME/bin/java 
-- ls /usr/lib/ | grep ja
-- ls /usr/lib/ | grep jme
-- ls /usr/share/ | grep ja
-- ls /usr/share/ | grep jme
-- ls /usr/bin/ | grep ja
-- ls /usr/bin/ | grep jme
-- ls /usr/bin/jmeter-server
-- jmeter=which jmeter
+#- ls /usr/lib/ | grep ja
+#- ls /usr/lib/ | grep jme
+#- ls /usr/share/ | grep ja
+#- ls /usr/share/ | grep jme
+#- ls /usr/bin/ | grep ja
+#- ls /usr/bin/ | grep jme
+#- ls /usr/bin/jmeter-server
+- which jmeter
 # cd /usr/bin/jmeter
 - echo "$JAVA_HOME"
 - echo "$PATH"
@@ -43,7 +43,7 @@ matrix:
 
 script: 
 #- sh jmeter.sh -n -t "GUru.jmx" 
-#- mvn -f ${TRAVIS_BUILD_DIR}/TestNgCommand1/pom.xml clean test compile package
+- mvn -f ${TRAVIS_BUILD_DIR}/TestNgCommand1/pom.xml clean test compile package
 - echo "$TRAVIS_BUILD_DIR"
 - rm -rf results && mkdir results
 - /bin/jmeter.sh
