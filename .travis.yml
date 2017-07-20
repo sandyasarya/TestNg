@@ -1,6 +1,60 @@
 language: java
-jdk:
-   -oraclejdk7
-   -openjdk7
-sudo: false
-script: mvn clean verify
+before_install:
+#- sudo apt-get install jmeter
+#- sudo apt-get install junit
+#- which junit
+#- sudo ln -s /usr/bin/junit /usr/share/jmeter/lib/junit
+#- export JAVA_CMD=$JAVA_HOME/bin/java 
+#- ls /usr/lib/ | grep ja
+#- ls /usr/lib/ | grep jme
+#- ls /usr/share/ | grep ja
+#- ls /usr/share/ | grep jme
+#- ls /usr/bin/ | grep ja
+#- ls /usr/bin/ | grep jme
+#- ls /usr/bin/jmeter-server
+#- which jmeter
+# cd /usr/bin/jmeter
+- echo "$JAVA_HOME"
+- echo "$PATH"
+install: true
+
+#before_script : 
+#- cd /d D:\apache-jmeter-3.2\apache-jmeter-3.2\bin
+#- jmeter -g D:\\apache-jmeter-3.2\\apacher-3.2\\bin\\result.jtl -o  C:\\Users\\sandesh\\Desktop\\dm1
+cache:
+  directories:
+    - $HOME/.m2
+   
+jdk: oraclejdk8
+
+#env:
+# - TEST_SUITE=units
+# - TEST_SUITE=integration
+matrix:
+  include:
+  - jdk: oraclejdk8
+    env: TEST_SUITE=First Suite
+ # - JMETER_VERSION: 3.0
+  #  env: TEST_SUITE=New
+     
+  allow_failures:
+  - jdk: 8
+    env: TEST_SUITE=New
+
+script: 
+#- sh jmeter.sh -n -t "GUru.jmx" 
+- mvn -f ${TRAVIS_BUILD_DIR}/TestNgCommand1/pom.xml clean test compile package
+- echo "$TRAVIS_BUILD_DIR"
+- rm -rf results && mkdir results
+#- /bin/jmeter.sh
+
+notifications:
+  email: sandesh.gadekar@mobiliya.com
+
+branches:
+  only:
+  - master
+
+git:
+  depth: 3
+  submodules: false
