@@ -57,6 +57,11 @@ public class AdminTest
 	{	   		
     	 Test = extent.createTest(method.getName()," ");	   	
 	}
+    @Test
+    public void Sample()
+    {
+    	System.out.println("this is basic test");
+    }
 
 	@Test
 	private void AdminLoginValidCredentials() throws Exception 
